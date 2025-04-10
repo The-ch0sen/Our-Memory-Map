@@ -15,8 +15,7 @@ async function initMap() {
 
   map.addListener("click", (e) => {
     selectedLatLng = e.latLng;
-    document.getElementById("status").innerText =
-      `已選地點：(${selectedLatLng.lat().toFixed(5)}, ${selectedLatLng.lng().toFixed(5)})`;
+    document.getElementById("status").innerText = `已選地點：(${selectedLatLng.lat().toFixed(5)}, ${selectedLatLng.lng().toFixed(5)})`;
   });
 
   memories.forEach(m => {
@@ -56,27 +55,4 @@ document.getElementById("submit").addEventListener("click", async () => {
   formData.append("file", photo);
   formData.append("upload_preset", config.uploadPreset);
 
-  const uploadRes = await fetch(`https://api.cloudinary.com/v1_1/${config.cloudName}/image/upload`, {
-    method: "POST",
-    body: formData
-  });
-
-  const uploadData = await uploadRes.json();
-
-  const memory = {
-    name,
-    note,
-    lat: selectedLatLng.lat(),
-    lng: selectedLatLng.lng(),
-    photoUrl: uploadData.secure_url
-  };
-
-  await fetch(config.apiUrl, {
-    method: "POST",
-    body: JSON.stringify(memory)
-  });
-
-  document.getElementById("status").innerText = "✅ 上傳成功！請重新整理頁面查看";
-});
-
-initMap();
+  const uploadRes = await fetch(`https://api.cloudinary.com/v

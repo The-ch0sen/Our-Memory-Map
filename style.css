@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans TC', 'Patrick Hand', cursive, sans-serif;
+    background: #FFF7F0;
+    color: #444;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #A1625E;
+    margin-bottom: 20px;
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid #FFE2E2;
+    margin-bottom: 20px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #FFDCDC;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #FFF;
+    margin-bottom: 12px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  input[type="file"] {
+    padding: 8px;
+    background-color: #FFF0F0;
+  }
+  
+  button {
+    background-color: #FFA6A6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF7C7C;
+  }
+  
+  #status {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+  }
+  
+  .marker-info img {
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  
